@@ -1,3 +1,8 @@
+# 0.0.8 - 24 Apr 2023
+
+Feature:
+- prompt for user input
+
 # 0.0.7 - 24 Apr 2023
 
 Bug fix:
