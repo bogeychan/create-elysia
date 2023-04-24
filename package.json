@@ -29,5 +29,9 @@
   "keywords": [
     "elysia",
     "create-elysia"
-  ]
+  ],
+  "dependencies": {
+    "minimist": "^1.2.8",
+    "prompts": "^2.4.2"
+  }
 }

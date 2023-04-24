@@ -1,70 +1,52 @@
 #!/usr/bin/env node
 
-// CLI ARGS -> create-elysia <package-name> <template-id>
-const packageName = process.argv[2] ?? 'elysia-project';
-const tempalteId = process.argv[3];
-
 import fs from 'node:fs';
 import url from 'node:url';
 import path from 'node:path';
+import minimist from 'minimist';
 
 import './scripts/deno-polyfills.js';
 
-function logUsage() {
-  console.log(
-    `
-📘📘📘📘📘📘📘📘📘📘📘📘 USAGE 📘📘📘📘📘📘📘📘📘📘📘📘
-📘
-📘 Command:
-📘\t"create-elysia <package-name> <template-id>"
-📘
-📘 Arguments:
-📘\tpackage-name = string
-📘\ttemplate-id  = "bun" | "deno" | "node-ts"
-📘
-📘📘📘📘📘📘📘📘📘📘📘📘📘📘📘📘📘📘📘📘📘📘📘📘📘📘📘📘
-`
-  );
-}
+import { askUser } from './scripts/prompt.js';
+import { exitOnError, exitOnMissingTemplate } from './scripts/utils.js';
 
-if (!packageName || !tempalteId) {
-  logUsage();
-  process.exit(2);
-}
-
-/**
- * @param {any} error
- */
-function exitOnError(error) {
-  logUsage();
-  console.error(`❌ Something went wrong :(\n\n`, error);
-  process.exit(1);
-}
-
-function exitOnMissingTemplate() {
-  logUsage();
-  console.error(`❌ Template "${tempalteId}" doesn't exist :(`);
-  process.exit(1);
-}
+const DEFAULT_TARGET_DIR = 'elysia-project';
 
 try {
+  /**
+   * @type {{ _: string[], template?: string }}
+   */
+  const argv = minimist(process.argv.slice(2));
+
+  /**
+   * @type {Awaited<ReturnType<typeof askUser>>}
+   */
+  const options = argv.template
+    ? {
+        targetDir: argv._[0] ?? DEFAULT_TARGET_DIR,
+        template: argv.template
+      }
+    : await askUser(DEFAULT_TARGET_DIR);
+
   const CWD = process.cwd();
   const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
-  const templatePath = path.resolve(__dirname, `template-${tempalteId}`);
+  const templatePath = path.resolve(__dirname, `template-${options.template}`);
 
   if (!fs.existsSync(templatePath)) {
-    exitOnMissingTemplate();
+    exitOnMissingTemplate(options.template);
   }
 
-  const packagePath = path.resolve(CWD, packageName);
+  const targetDirPath = path.resolve(CWD, options.targetDir);
 
-  fs.mkdirSync(packagePath);
+  if (options.targetDir !== '.') {
+    fs.mkdirSync(targetDirPath);
+  }
 
-  fs.cpSync(templatePath, packagePath, { recursive: true });
+  fs.cpSync(templatePath, targetDirPath, { recursive: true });
 
   console.log("✅ You're ready to goo :)");
-  console.log(`✅ cd ${packageName} && echo "📘 Read the README.md :D"`);
+  console.log(`✅ cd ${options.targetDir} && echo "📘 Read the README.md :D"`);
 } catch (error) {
   exitOnError(error);
 }
