@@ -13,7 +13,7 @@
   },
   "type": "module",
   "bin": {
-    "create-elysia-test": "index.js"
+    "create-elysia": "index.js"
   },
   "files": [
     "index.js",
