@@ -31,25 +31,16 @@ if (!fs.cpSync) {
      * @param {string} target
      */
     function copyFolderRecursiveSync(source, target) {
-      let files = [];
-
-      // Check if folder needs to be created or integrated
-      const targetFolder = path.join(target, path.basename(source));
-      if (!fs.existsSync(targetFolder)) {
-        fs.mkdirSync(targetFolder);
-      }
-
       // Copy
       if (fs.lstatSync(source).isDirectory()) {
-        files = fs.readdirSync(source);
-        files.forEach((file) => {
-          const curSource = path.join(source, file);
-          if (fs.lstatSync(curSource).isDirectory()) {
-            copyFolderRecursiveSync(curSource, targetFolder);
+        for (const filename of fs.readdirSync(source)) {
+          const filePath = path.join(source, filename);
+          if (fs.lstatSync(filePath).isDirectory()) {
+            copyFolderRecursiveSync(filePath, target);
           } else {
-            copyFileSync(curSource, targetFolder);
+            copyFileSync(filePath, target);
           }
-        });
+        }
       }
     }
     // @ts-ignore
