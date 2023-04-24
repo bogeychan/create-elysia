@@ -1,3 +1,8 @@
+# 0.0.7 - 24 Apr 2023
+
+Bug fix:
+- `EOL` in bash scripts
+
 # 0.0.6 - 24 Apr 2023
 
 Bug fix:
