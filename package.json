@@ -1,0 +1,15 @@
+{
+  "name": "create-elysia",
+  "version": "0.0.2",
+  "type": "module",
+  "bin": {
+    "create-elysia-test": "index.js"
+  },
+  "files": [
+    "index.js",
+    "template-*"
+  ],
+  "devDependencies": {
+    "@types/node": "^18.16.0"
+  }
+}

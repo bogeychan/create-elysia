@@ -1,0 +1,6 @@
+{
+  "tasks": {
+    "dev": "deno run --node-modules-dir --allow-net --allow-env --watch main.ts",
+    "start": "deno run --node-modules-dir --allow-net --allow-env main.ts"
+  }
+}

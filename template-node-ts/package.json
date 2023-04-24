@@ -1,0 +1,18 @@
+{
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "ts-node --esm ./main.ts",
+    "transpile": "elysia-polyfills",
+    "test": "ts-node --esm ./test.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.16.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@bogeychan/elysia-polyfills": "^0.0.4",
+    "elysia": "^0.4.9"
+  }
+}
