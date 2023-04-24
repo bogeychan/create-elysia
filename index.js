@@ -8,6 +8,8 @@ import fs from 'node:fs';
 import url from 'node:url';
 import path from 'node:path';
 
+import './scripts/deno-polyfills.js';
+
 function logUsage() {
   console.log(
     `

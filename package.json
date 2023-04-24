@@ -17,7 +17,8 @@
   },
   "files": [
     "index.js",
-    "template-*"
+    "template-*/**",
+    "scripts"
   ],
   "devDependencies": {
     "@types/node": "^18.16.0"

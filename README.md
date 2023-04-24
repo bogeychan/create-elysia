@@ -20,6 +20,12 @@ With PNPM:
 pnpm create elysia
 ```
 
+With Deno:
+
+```bash
+deno run --allow-read --allow-write npm:create-elysia
+```
+
 Then follow the prompts!
 
 You can also directly specify the project name and the template you want to use via additional command line arguments. For example, to scaffold a `Bun` project, run:
