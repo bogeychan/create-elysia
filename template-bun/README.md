@@ -1,6 +1,6 @@
 # Setup
 
-Follow these steps to run [Elysia.js](https://elysiajs.com) under [Deno](https://deno.land):
+Follow these steps to run [Elysia.js](https://elysiajs.com) under [Bun](https://bun.sh):
 
 1. Download packages
     ```bash
