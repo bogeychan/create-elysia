@@ -3,8 +3,7 @@
   "type": "module",
   "scripts": {
     "start": "ts-node --esm ./main.ts",
-    "transpile": "elysia-polyfills",
-    "test": "ts-node --esm ./test.ts"
+    "transpile": "elysia-polyfills"
   },
   "devDependencies": {
     "@types/node": "^18.16.0",
