@@ -23,7 +23,7 @@ pnpm create elysia
 With Deno:
 
 ```bash
-deno run --allow-read --allow-write npm:create-elysia
+deno run -r=npm:create-elysia --allow-read --allow-write npm:create-elysia
 ```
 
 Then follow the prompts!
