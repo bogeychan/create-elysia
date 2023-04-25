@@ -40,7 +40,7 @@ Currently supported template presets include:
 - `deno`
 - `node-ts`
 
-You can use . for the project name to scaffold in the current directory.
+You can use `.` for the project name to scaffold in the current directory.
 
 ## Credits ❤️
 
