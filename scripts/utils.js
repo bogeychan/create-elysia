@@ -1,3 +1,10 @@
+import url from 'node:url';
+import path from 'node:path';
+
+const __dirname = path.dirname(
+  path.dirname(url.fileURLToPath(import.meta.url))
+);
+
 /**
  * @param {any} error
  */
@@ -8,10 +15,36 @@ export function exitOnError(error) {
 }
 
 /**
- * @param {string} tempalte
+ * @param {Template} template
  */
-export function exitOnMissingTemplate(tempalte) {
-  // logUsage();
-  console.error(`❌ Template "${tempalte}" doesn't exist :(`);
-  process.exit(1);
+export function resolveTemplatePath(template) {
+  return path.resolve(__dirname, `template-${template}`);
+}
+
+/**
+ * @param {Options} options
+ * @returns {string[]}
+ */
+export function getCommandsFor({ targetDir, template }) {
+  const commands = [];
+
+  if (targetDir !== '.') {
+    commands.push(`cd ${targetDir}/`);
+  }
+
+  switch (template) {
+    case 'bun':
+      commands.push('bun install', 'bun run main.ts');
+      break;
+
+    case 'deno':
+      commands.push('./prepare.sh', 'deno task start');
+      break;
+
+    case 'node-ts':
+      commands.push('./prepare.sh', 'npm start');
+      break;
+  }
+
+  return commands;
 }
