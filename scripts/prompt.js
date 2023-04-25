@@ -41,22 +41,25 @@ function PROJECT_NAME(defaultTargetDir) {
   };
 }
 
+const onCancel = () => process.exit(0);
+
 /**
  * @param {string} defaultTargetDir
  * @returns {Promise<Options>}
  */
 export function promptOptions(defaultTargetDir) {
-  return prompts([
-    PROJECT_NAME(defaultTargetDir),
-    TEMPLATES('Select a template')
-  ]);
+  return prompts(
+    [PROJECT_NAME(defaultTargetDir), TEMPLATES('Select a template')],
+    { onCancel }
+  );
 }
 
 /**
  * @param {string} defaultTargetDir
  */
 export async function promptOnMissingTargetDir(defaultTargetDir) {
-  return (await prompts([PROJECT_NAME(defaultTargetDir)])).targetDir;
+  return (await prompts([PROJECT_NAME(defaultTargetDir)], { onCancel }))
+    .targetDir;
 }
 
 /**
@@ -64,10 +67,13 @@ export async function promptOnMissingTargetDir(defaultTargetDir) {
  */
 export async function promptOnInvalidTemplate(template) {
   return (
-    await prompts([
-      TEMPLATES(
-        `"${template}" isn't a valid template. Please choose from below`
-      )
-    ])
+    await prompts(
+      [
+        TEMPLATES(
+          `"${template}" isn't a valid template. Please choose from below`
+        )
+      ],
+      { onCancel }
+    )
   ).template;
 }
