@@ -38,11 +38,11 @@ export function getCommandsFor({ targetDir, template }) {
       break;
 
     case 'deno':
-      commands.push('./prepare.sh', 'deno task start');
+      commands.push('bash prepare.sh', 'deno task start');
       break;
 
     case 'node-ts':
-      commands.push('./prepare.sh', 'npm start');
+      commands.push('bash prepare.sh', 'npm start');
       break;
   }
 
