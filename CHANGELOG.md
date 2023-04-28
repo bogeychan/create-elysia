@@ -1,3 +1,9 @@
+# 0.0.11 - 28 Apr 2023
+
+Bug fix:
+
+- upgrade @bogeychan/elysia-polyfills to [v0.0.6](https://github.com/bogeychan/elysia-polyfills/blob/9b441c21bd92c6a0bad697880f106e29559c96e7/CHANGELOG.md)
+
 # 0.0.10 - 24 Apr 2023
 
 Improvement:
