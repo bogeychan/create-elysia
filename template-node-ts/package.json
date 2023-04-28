@@ -11,7 +11,7 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "@bogeychan/elysia-polyfills": "^0.0.4",
+    "@bogeychan/elysia-polyfills": "^0.0.6",
     "elysia": "^0.4.9"
   }
 }
