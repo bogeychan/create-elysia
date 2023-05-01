@@ -1,3 +1,9 @@
+# 0.0.12 - 01 Mai 2023
+
+Bug fix:
+
+- always use latest `@bogeychan/elysia-polyfills`
+
 # 0.0.11 - 28 Apr 2023
 
 Bug fix:
