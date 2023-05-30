@@ -12,6 +12,6 @@
   },
   "dependencies": {
     "@bogeychan/elysia-polyfills": "latest",
-    "elysia": "^0.4.9"
+    "elysia": "^0.5.9"
   }
 }
