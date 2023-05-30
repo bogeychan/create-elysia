@@ -1,3 +1,9 @@
+# 0.0.13 - 01 Mai 2023
+
+Bug fix:
+
+- upgrade `Elysia.js` to `v0.5.9`
+
 # 0.0.12 - 01 Mai 2023
 
 Bug fix:
@@ -8,7 +14,7 @@ Bug fix:
 
 Bug fix:
 
-- upgrade @bogeychan/elysia-polyfills to [v0.0.6](https://github.com/bogeychan/elysia-polyfills/blob/9b441c21bd92c6a0bad697880f106e29559c96e7/CHANGELOG.md)
+- upgrade `@bogeychan/elysia-polyfills` to [v0.0.6](https://github.com/bogeychan/elysia-polyfills/blob/9b441c21bd92c6a0bad697880f106e29559c96e7/CHANGELOG.md)
 
 # 0.0.10 - 24 Apr 2023
 
@@ -51,3 +57,4 @@ Feature:
 - run cli from `deno run`
 
 # 0.0.3 - 24 Apr 2023
+
