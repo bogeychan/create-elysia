@@ -1,4 +1,10 @@
-# 0.0.14 - 01 Mai 2023
+# 0.0.15 - 01 Jun 2023
+
+Bug fix:
+
+- add commands for `node`-template
+
+# 0.0.14 - 01 Jun 2023
 
 Feature:
 
