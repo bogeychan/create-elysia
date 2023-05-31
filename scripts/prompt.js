@@ -21,8 +21,12 @@ function TEMPLATES(message) {
         value: 'deno'
       },
       {
-        title: 'Node.js',
+        title: 'Node.js - Typescript/ESM',
         value: 'node-ts'
+      },
+      {
+        title: 'Node.js - CommonJS',
+        value: 'node'
       }
     ]
   };
@@ -77,3 +81,4 @@ export async function promptOnInvalidTemplate(template) {
     )
   ).template;
 }
+

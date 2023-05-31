@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "@bogeychan/elysia-polyfills": "latest",
+    "elysia": "^0.5.10"
+  }
+}
