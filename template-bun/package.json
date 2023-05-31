@@ -4,6 +4,6 @@
     "bun-types": "^0.6.4"
   },
   "dependencies": {
-    "elysia": "^0.5.9"
+    "elysia": "^0.5.10"
   }
 }
