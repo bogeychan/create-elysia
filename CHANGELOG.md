@@ -1,3 +1,9 @@
+# 0.0.17 - 04 Jun 2023
+
+Bug fix:
+
+- remove prepare command hints
+
 # 0.0.16 - 04 Jun 2023
 
 Bug fix:
