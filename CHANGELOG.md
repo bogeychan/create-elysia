@@ -1,3 +1,9 @@
+# 0.0.16 - 04 Jun 2023
+
+Bug fix:
+
+- upgrade `Elysia.js` to `v0.5.15`
+
 # 0.0.15 - 01 Jun 2023
 
 Bug fix:
