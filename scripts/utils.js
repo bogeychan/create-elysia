@@ -46,7 +46,7 @@ export function getCommandsFor({ targetDir, template }) {
       break;
 
     case 'node-ts':
-      commands.push('npm start');
+      commands.push('npm i', 'npm start');
       break;
   }
 
