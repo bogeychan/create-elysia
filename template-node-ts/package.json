@@ -7,10 +7,10 @@
   "devDependencies": {
     "@types/node": "^18.16.0",
     "ts-node": "^10.9.1",
-    "typescript": "^5.0.4"
+    "typescript": "^5.2.2"
   },
   "dependencies": {
     "@bogeychan/elysia-polyfills": "latest",
-    "elysia": "^0.5.15"
+    "elysia": "^0.6.19"
   }
 }
