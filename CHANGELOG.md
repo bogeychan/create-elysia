@@ -1,3 +1,9 @@
+# 0.0.19 - 09 Sep 2023
+
+Bug fix:
+
+- deno recursive copy
+
 # 0.0.18 - 08 Sep 2023
 
 Feature:
