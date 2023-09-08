@@ -1,3 +1,9 @@
+# 0.0.18 - 08 Sep 2023
+
+Feature:
+
+- update to elysia 0.6.19
+
 # 0.0.17 - 04 Jun 2023
 
 Bug fix:
