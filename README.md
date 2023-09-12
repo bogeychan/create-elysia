@@ -2,6 +2,12 @@
 
 ## Scaffolding Your First [Elysia.js](https://elysiajs.com) Project
 
+With Bun:
+
+```bash
+bunx create-elysia@latest
+```
+
 With NPM:
 
 ```bash
