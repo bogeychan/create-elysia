@@ -27,6 +27,10 @@ function TEMPLATES(message) {
       {
         title: 'Node.js - CommonJS',
         value: 'node'
+      },
+      {
+        title: 'Plugin',
+        value: 'plugin'
       }
     ]
   };

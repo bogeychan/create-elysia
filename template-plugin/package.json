@@ -1,0 +1,44 @@
+{
+  "name": "$PROJECT_NAME$",
+  "version": "0.0.1",
+  "description": "$PROJECT_NAME$ plugin for Elysia.js",
+  "author": {
+    "name": "...",
+    "url": "https://github.com/...",
+    "email": "..."
+  },
+  "main": "./dist/index.js",
+  "exports": {
+    "bun": "./dist/index.js",
+    "node": "./dist/cjs/index.js",
+    "require": "./dist/cjs/index.js",
+    "import": "./dist/index.js",
+    "default": "./dist/index.js"
+  },
+  "types": "./src/index.ts",
+  "keywords": [
+    "elysia"
+  ],
+  "homepage": "https://github.com/.../$PROJECT_NAME$",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/.../$PROJECT_NAME$"
+  },
+  "bugs": "https://github.com/.../$PROJECT_NAME$/issues",
+  "scripts": {
+    "dev": "bun run --watch examples/index.ts",
+    "test": "bun test",
+    "test:node": "npm install --prefix ./tests/node/cjs/ && npm install --prefix ./tests/node/esm/ && node ./tests/node/cjs/index.js && node ./tests/node/esm/index.js",
+    "build": "rimraf dist && tsc --project tsconfig.esm.json && tsc --project tsconfig.cjs.json",
+    "release": "bun run build && bun run test && npm run test:node && npm publish --access public"
+  },
+  "peerDependencies": {
+    "elysia": ">= 0.6.19"
+  },
+  "devDependencies": {
+    "bun-types": "^1.0.1",
+    "elysia": "^0.6.19",
+    "typescript": "^5.2.2",
+    "rimraf": "^5.0.1"
+  }
+}

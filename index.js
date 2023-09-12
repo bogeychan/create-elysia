@@ -18,7 +18,9 @@ import {
   exitOnError,
   getCommandsFor,
   fillPlaceholders,
-  resolveTemplatePath
+  renameIgnoreFiles,
+  resolveTemplatePath,
+  readScaffoldingConfigOnce
 } from './scripts/utils.js';
 
 const DEFAULT_TARGET_DIR = 'elysia-project';
@@ -62,9 +64,17 @@ try {
 
   fs.cpSync(templatePath, targetDirPath, { recursive: true });
 
-  fillPlaceholders(targetDirPath, {
-    $PROJECT_NAME$: path.basename(targetDirPath)
-  });
+  const config = readScaffoldingConfigOnce(targetDirPath);
+
+  fillPlaceholders(
+    targetDirPath,
+    {
+      $PROJECT_NAME$: path.basename(targetDirPath)
+    },
+    config
+  );
+
+  renameIgnoreFiles(targetDirPath, config);
 
   const commands = getCommandsFor(options)
     .map((command) => `\t${command}`)

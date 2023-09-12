@@ -1,0 +1,13 @@
+{
+    "placeholderEntries": [
+        "src/index.ts",
+        "tests/index.test.ts",
+        "tests/node/cjs/index.js",
+        "tests/node/cjs/package.json",
+        "tests/node/esm/index.js",
+        "tests/node/esm/package.json"
+    ],
+    "gitignoreEntries": [
+        "tests/node/gitignore"
+    ]
+}

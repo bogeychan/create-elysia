@@ -49,22 +49,38 @@ export function getCommandsFor({ targetDir, template }) {
     case 'node-ts':
       commands.push('npm i', 'npm start');
       break;
+
+    case 'plugin':
+      commands.push('bun i', 'bun run dev');
+      break;
   }
 
   return commands;
 }
 
+const CONFIG_FILE = 'scaffolding.json';
 const PLACEHOLDER_FILES = ['package.json', 'README.md'];
+
+/**
+ * @typedef ScaffoldingConfig
+ *
+ * @type {object}
+ *
+ * @property {string[]} [placeholderEntries]
+ * @property {string[]} [ignoreEntries]
+ */
 
 /**
  * @param {string} dirPath
  * @param {Record<string, string>} replacements
+ * @param {ScaffoldingConfig} config
  */
-export function fillPlaceholders(dirPath, replacements) {
-  const packageJsonPath = path.join(dirPath, 'package.json');
-  fs.existsSync(packageJsonPath);
+export function fillPlaceholders(dirPath, replacements, config) {
+  const placeholderFiles = config.placeholderEntries
+    ? [...PLACEHOLDER_FILES, ...config.placeholderEntries]
+    : PLACEHOLDER_FILES;
 
-  for (const placeholderFile of PLACEHOLDER_FILES) {
+  for (const placeholderFile of placeholderFiles) {
     const filePath = path.join(dirPath, placeholderFile);
 
     if (!fs.existsSync(filePath)) {
@@ -79,5 +95,49 @@ export function fillPlaceholders(dirPath, replacements) {
 
     fs.writeFileSync(filePath, file);
   }
+}
+
+const IGNORE_FILES = ['gitignore', 'npmignore'];
+
+/**
+ * @param {string} dirPath
+ * @param {ScaffoldingConfig} config
+ */
+export function renameIgnoreFiles(dirPath, config) {
+  const gitignoreFiles = config.ignoreEntries
+    ? [...IGNORE_FILES, ...config.ignoreEntries]
+    : IGNORE_FILES;
+
+  for (const gitignoreFile of gitignoreFiles) {
+    const fileName = path.basename(gitignoreFile);
+    const filePath = path.join(dirPath, gitignoreFile);
+
+    if (!fs.existsSync(filePath)) {
+      continue;
+    }
+
+    const newFilePath = path.join(path.dirname(filePath), `.${fileName}`);
+    fs.renameSync(filePath, newFilePath);
+  }
+}
+
+/**
+ * @param {string} dirPath
+ * @returns {ScaffoldingConfig}
+ */
+export function readScaffoldingConfigOnce(dirPath) {
+  let config = {};
+
+  const filePath = path.join(dirPath, CONFIG_FILE);
+
+  try {
+    config = JSON.parse(fs.readFileSync(filePath, { encoding: 'utf8' }));
+  } catch (e) {
+    // ignored
+  } finally {
+    fs.rmSync(filePath, { force: true });
+  }
+
+  return config;
 }
 
