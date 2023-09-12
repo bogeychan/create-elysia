@@ -35,7 +35,7 @@ export function getCommandsFor({ targetDir, template }) {
 
   switch (template) {
     case 'bun':
-      commands.push('bun install', 'bun run main.ts');
+      commands.push('bun i', 'bun run main.ts');
       break;
 
     case 'deno':
