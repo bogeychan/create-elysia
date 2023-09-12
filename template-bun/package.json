@@ -1,4 +1,5 @@
 {
+  "name": "$PROJECT_NAME$",
   "type": "module",
   "devDependencies": {
     "bun-types": "^1.0.1"

@@ -1,3 +1,4 @@
+import fs from 'node:fs';
 import url from 'node:url';
 import path from 'node:path';
 
@@ -51,5 +52,32 @@ export function getCommandsFor({ targetDir, template }) {
   }
 
   return commands;
+}
+
+const PLACEHOLDER_FILES = ['package.json', 'README.md'];
+
+/**
+ * @param {string} dirPath
+ * @param {Record<string, string>} replacements
+ */
+export function fillPlaceholders(dirPath, replacements) {
+  const packageJsonPath = path.join(dirPath, 'package.json');
+  fs.existsSync(packageJsonPath);
+
+  for (const placeholderFile of PLACEHOLDER_FILES) {
+    const filePath = path.join(dirPath, placeholderFile);
+
+    if (!fs.existsSync(filePath)) {
+      continue;
+    }
+
+    let file = fs.readFileSync(filePath, { encoding: 'utf8' });
+
+    for (const placeholder in replacements) {
+      file = file.replaceAll(placeholder, replacements[placeholder]);
+    }
+
+    fs.writeFileSync(filePath, file);
+  }
 }
 

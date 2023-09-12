@@ -1,3 +1,5 @@
+# $PROJECT_NAME$
+
 # Setup
 
 Follow these steps to run [Elysia.js](https://elysiajs.com) under [Node.js](https://nodejs.org):

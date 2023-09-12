@@ -1,4 +1,5 @@
 {
+  "name": "$PROJECT_NAME$",
   "private": true,
   "scripts": {
     "start": "node main.js"

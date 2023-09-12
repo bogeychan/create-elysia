@@ -17,6 +17,7 @@ import {
 import {
   exitOnError,
   getCommandsFor,
+  fillPlaceholders,
   resolveTemplatePath
 } from './scripts/utils.js';
 
@@ -60,6 +61,10 @@ try {
   }
 
   fs.cpSync(templatePath, targetDirPath, { recursive: true });
+
+  fillPlaceholders(targetDirPath, {
+    $PROJECT_NAME$: path.basename(targetDirPath)
+  });
 
   const commands = getCommandsFor(options)
     .map((command) => `\t${command}`)
