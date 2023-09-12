@@ -7,7 +7,7 @@
         "tests/node/esm/index.js",
         "tests/node/esm/package.json"
     ],
-    "gitignoreEntries": [
+    "ignoreEntries": [
         "tests/node/gitignore"
     ]
 }

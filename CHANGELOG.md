@@ -1,3 +1,14 @@
+# 0.0.20 - 12 Sep 2023
+
+Feature:
+
+- new [plugin](./template-plugin) template
+- support for [placeholder and ignore file config](./template-plugin/scaffolding.json)
+
+Improvement:
+
+- shorten `bun install` command
+
 # 0.0.19 - 09 Sep 2023
 
 Bug fix:
