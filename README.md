@@ -38,7 +38,9 @@ Currently supported template presets include:
 
 - `bun`
 - `deno`
+- `node`
 - `node-ts`
+- `plugin`
 
 You can use `.` for the project name to scaffold in the current directory.
 
@@ -53,3 +55,4 @@ This project was inspired by [create-vite](https://www.npmjs.com/package/create-
 ## License
 
 [MIT](LICENSE)
+
