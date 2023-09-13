@@ -26,8 +26,9 @@
   },
   "bugs": "https://github.com/.../$PROJECT_NAME$/issues",
   "scripts": {
+    "lint": "eslint .",
     "dev": "bun run --watch examples/index.ts",
-    "test": "bun test",
+    "test": "bun run lint && bun test",
     "test:node": "npm install --prefix ./tests/node/cjs/ && npm install --prefix ./tests/node/esm/ && node ./tests/node/cjs/index.js && node ./tests/node/esm/index.js",
     "build": "rimraf dist && tsc --project tsconfig.esm.json && tsc --project tsconfig.cjs.json",
     "release": "bun run build && bun run test && npm run test:node && npm publish --access public"
@@ -36,9 +37,12 @@
     "elysia": ">= 0.6.19"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
     "bun-types": "^1.0.1",
     "elysia": "^0.6.19",
-    "typescript": "^5.2.2",
-    "rimraf": "^5.0.1"
+    "eslint": "^8.49.0",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.2.2"
   }
 }
