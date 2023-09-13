@@ -1,3 +1,9 @@
+# 0.0.21 - 13 Sep 2023
+
+Feature:
+
+- added `eslint` & `prettier` config to `plugin` template
+
 # 0.0.20 - 12 Sep 2023
 
 Feature:
