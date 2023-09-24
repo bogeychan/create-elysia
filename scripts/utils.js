@@ -49,6 +49,10 @@ export function getCommandsFor({ targetDir, template }) {
     case 'node-ts':
       commands.push('npm i', 'npm start');
       break;
+    
+    case 'node-esm':
+      commands.push('npm i', 'npm start');
+      break;
 
     case 'plugin':
       commands.push('bun i', 'bun run dev');
