@@ -2,7 +2,7 @@
 
 Feature:
 
-- `template-bun` improved tsconfig and dedicated typecheck
+- `template-bun` improved tsconfig and dedicated typecheck [#3](https://github.com/bogeychan/create-elysia/pull/3)
 
 # 0.0.21 - 13 Sep 2023
 
