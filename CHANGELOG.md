@@ -1,3 +1,9 @@
+# 0.0.23 - 19 Nov 2023
+
+Improvement:
+
+- use new `bun` api
+
 # 0.0.22 - 19 Nov 2023
 
 Feature:
