@@ -9,10 +9,8 @@
     "strict": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true,
     "resolveJsonModule": true,
     "moduleDetection": "force",
-    "isolatedModules": true,
     "noUncheckedIndexedAccess": true,
     "noEmit": true,
     "types": [
