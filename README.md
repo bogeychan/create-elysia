@@ -54,10 +54,6 @@ You can use `.` for the project name to scaffold in the current directory.
 
 This project was inspired by [create-vite](https://www.npmjs.com/package/create-vite)
 
-## Author
-
-[bogeychan](https://github.com/bogeychan)
-
 ## License
 
 [MIT](LICENSE)
