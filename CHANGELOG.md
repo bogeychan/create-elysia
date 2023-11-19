@@ -1,3 +1,9 @@
+# 0.0.22 - 19 Nov 2023
+
+Feature:
+
+- `template-bun` improved tsconfig and dedicated typecheck
+
 # 0.0.21 - 13 Sep 2023
 
 Feature:
