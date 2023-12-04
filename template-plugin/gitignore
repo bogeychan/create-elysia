@@ -1,6 +1,5 @@
 .DS_Store
 .env
 
-bun.lockb
 dist/
 node_modules/
