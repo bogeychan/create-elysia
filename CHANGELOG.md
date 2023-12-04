@@ -1,3 +1,9 @@
+# 0.0.24 - 04 Dec 2023
+
+Bug fix:
+
+- `template-plugin` update to elysia 0.7
+
 # 0.0.23 - 19 Nov 2023
 
 Improvement:
