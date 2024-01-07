@@ -1,3 +1,10 @@
+# 0.0.25 - 07 Jan 2024
+
+Bug fix:
+
+- `template-bun` update to elysia 0.8
+- `template-plugin` update to elysia 0.8
+
 # 0.0.24 - 04 Dec 2023
 
 Bug fix:
