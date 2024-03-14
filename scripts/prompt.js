@@ -25,6 +25,10 @@ function TEMPLATES(message) {
         value: 'node-ts'
       },
       {
+        title: 'Node.js - JSDoc/ESM',
+        value: 'node-esm'
+      },
+      {
         title: 'Node.js - CommonJS',
         value: 'node'
       },
