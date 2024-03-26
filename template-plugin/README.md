@@ -11,17 +11,17 @@ bun add $PROJECT_NAME$
 ## Usage
 
 ```ts
-import { Elysia } from 'elysia';
-import { myPlugin } from '$PROJECT_NAME$';
+import { Elysia } from 'elysia'
+import { myPlugin } from '$PROJECT_NAME$'
 
 const app = new Elysia()
-  .use(myPlugin())
-  .get('/', (ctx) => {
-    return ctx.getProjectName();
-  })
-  .listen(8080);
+	.use(myPlugin())
+	.get('/', (ctx) => {
+		return ctx.getProjectName()
+	})
+	.listen(8080)
 
-console.log(`Listening on http://${app.server!.hostname}:${app.server!.port}`);
+console.log(`Listening on ${app.server!.url}`)
 ```
 
 Checkout the [examples](./examples) and [tests](./tests) folders on github.
@@ -39,10 +39,9 @@ Checkout the [examples](./examples) and [tests](./tests) folders on github.
 Returns the project name
 
 ```js
-const projectName = ctx.getProjectName();
+const projectName = ctx.getProjectName()
 ```
 
 ## License
 
 [...](LICENSE)
-
