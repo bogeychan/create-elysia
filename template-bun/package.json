@@ -6,10 +6,10 @@
     "typecheck": "tsc"
   },
   "devDependencies": {
-    "bun-types": "1",
+    "@types/bun": "1",
     "typescript": "5"
   },
   "dependencies": {
-    "elysia": "0.8"
+    "elysia": "1"
   }
 }
