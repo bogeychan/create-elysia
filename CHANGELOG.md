@@ -1,3 +1,9 @@
+# 0.0.27 - 26 Mar 2024
+
+Bug fix:
+
+- `template-plugin` use global plugin derive
+
 # 0.0.26 - 26 Mar 2024
 
 Bug fix:
