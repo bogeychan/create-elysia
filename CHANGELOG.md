@@ -1,3 +1,13 @@
+# 0.0.28 - 26 Mar 2024
+
+Bug fix:
+
+- `template-plugin` types path
+
+Improvement:
+
+- `template-plugin` use new server url syntax
+
 # 0.0.27 - 26 Mar 2024
 
 Bug fix:
