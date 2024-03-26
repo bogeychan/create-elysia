@@ -1,3 +1,11 @@
+# 0.0.26 - 26 Mar 2024
+
+Bug fix:
+
+- `template-bun` update to elysia 1
+- `template-plugin` update to elysia 1
+- `template-plugin` npmignore the `src` folder
+
 # 0.0.25 - 07 Jan 2024
 
 Bug fix:
@@ -139,4 +147,3 @@ Feature:
 - run cli from `deno run`
 
 # 0.0.3 - 24 Apr 2023
-
