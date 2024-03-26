@@ -8,6 +8,7 @@
     "email": "..."
   },
   "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     "bun": "./dist/index.js",
     "node": "./dist/cjs/index.js",
@@ -15,7 +16,6 @@
     "import": "./dist/index.js",
     "default": "./dist/index.js"
   },
-  "types": "./src/index.ts",
   "keywords": [
     "elysia"
   ],
