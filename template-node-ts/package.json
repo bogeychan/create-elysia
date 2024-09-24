@@ -3,15 +3,15 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "ts-node --esm ./main.ts"
+    "start": "tsx ./main.ts"
   },
   "devDependencies": {
-    "@types/node": "^18.16.0",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.2.2"
+    "@types/node": "^20",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
   },
   "dependencies": {
     "@bogeychan/elysia-polyfills": "latest",
-    "elysia": "^0.6.19"
+    "elysia": "^1.1.16"
   }
 }
