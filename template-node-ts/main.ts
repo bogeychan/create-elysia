@@ -1,8 +1,8 @@
-import '@bogeychan/elysia-polyfills/node/index.js';
+import { Elysia } from "elysia";
+import { node } from "@elysiajs/node";
 
-import { Elysia } from 'elysia';
+new Elysia({ adapter: node() })
+  .get("/", () => ({ hello: "Node.js👋" }))
+  .listen(3000);
 
-const app = new Elysia().get('/', () => ({ hello: 'Node.js👋' })).listen(8080);
-
-console.log(`Listening on http://localhost:${app.server!.port}`);
-
+console.log(`Listening on http://localhost:3000`);

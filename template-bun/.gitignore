@@ -2,4 +2,4 @@
 .env
 .env.local
 node_modules/
-bun.lockb
+bun.lock

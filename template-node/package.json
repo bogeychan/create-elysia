@@ -5,7 +5,7 @@
     "start": "node main.js"
   },
   "dependencies": {
-    "@bogeychan/elysia-polyfills": "latest",
-    "elysia": "^0.6.19"
+    "elysia": "1",
+    "@elysiajs/node": "1"
   }
 }

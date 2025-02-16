@@ -21,7 +21,7 @@
     "scripts"
   ],
   "devDependencies": {
-    "@types/node": "^18.16.0"
+    "@types/node": "^22.13.4"
   },
   "homepage": "https://github.com/bogeychan/create-elysia",
   "bugs": "https://github.com/bogeychan/create-elysia/issues",

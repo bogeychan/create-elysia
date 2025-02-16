@@ -2,6 +2,6 @@
 .env
 .env.local
 
-bun.lockb
+bun.lock
 dist/
 node_modules/
