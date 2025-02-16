@@ -1,11 +1,14 @@
 {
   "name": "create-elysia",
-  "version": "0.0.28",
+  "version": "0.1.0",
   "description": "Scaffolding Your First Elysia.js Project",
   "author": {
     "name": "bogeychan",
     "url": "https://github.com/bogeychan",
     "email": "bogeychan@outlook.com"
+  },
+  "scripts": {
+    "release": "npm publish --access public"
   },
   "repository": {
     "type": "git",

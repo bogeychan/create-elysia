@@ -1,3 +1,9 @@
+# 0.1.0 - 16 Feb 2025
+
+Improvement:
+
+- use official `@elysiajs/node` instead of `@elysia-polyfills`
+
 # 0.0.28 - 26 Mar 2024
 
 Bug fix:
