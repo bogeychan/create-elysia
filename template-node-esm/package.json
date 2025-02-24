@@ -1,0 +1,14 @@
+{
+    "name": "$PROJECT_NAME$",
+    "private": true,
+    "type": "module",
+    "scripts": {
+      "start": "node ./main.js"
+    },
+    "dependencies": {
+      "@bogeychan/elysia-polyfills": "^0.6.1",
+      "@sinclair/typebox": "^0.31.15",
+      "elysia": "^0.7.12"
+    }
+}
+  

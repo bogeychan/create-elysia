@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "target": "esnext",
+        "moduleResolution": "node",
+        "allowJs": true,
+        "checkJs": true,
+        "noImplicitAny": true,
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "forceConsistentCasingInFileNames": true,
+        "resolveJsonModule": true,
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "strict": true
+    },
+    "include": ["main.js", "src/**/*.js"],
+    "exclude": ["node_modules/**"]
+}
